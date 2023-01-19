@@ -20,4 +20,17 @@ class PessoaModel
 
     $this->rows = $dao->select();
   }
+  public function delete()
+  {
+    include 'DAO/PessoaDao.php';
+
+    $dao = new PessoaDAO();
+    $dao->delete($this->id);
+  }
+  public function getByid(int $id){
+    include 'DAO/PessoaDao.php';
+
+    $dao = new PessoaDAO();
+
+  }
 }

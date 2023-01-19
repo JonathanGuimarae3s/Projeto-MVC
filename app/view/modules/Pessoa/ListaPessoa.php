@@ -23,10 +23,11 @@
       <tbody>
         <?php foreach ($model->rows as $item) : ?>
           <tr>
-            <td><?=$item->id?></td>
-            <td><?=$item->nome?></td>
-            <td><?=$item->cpf?></td>
-            <td><?=$item->dataNascimento?></td>
+            <td><?= $item->id ?></td>
+            <td><?= $item->nome ?></td>
+            <td><?= $item->cpf ?></td>
+            <td><?= $item->dataNascimento ?></td>
+            <td><a href="/pessoa/form?id=<?= $item->id ?>"><button>Editar</button></a></td>
           </tr>
         <?php endforeach; ?>
       </tbody>
