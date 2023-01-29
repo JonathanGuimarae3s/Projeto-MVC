@@ -36,7 +36,8 @@ class ConfigController
   {
     // carregar a requisição feita pelo user 
     $classe = "\\App\\Controllers\\" . $this->urlController;
+    $metodo = $this->urlMetodo;
     $classeCarregar = new $classe;
-    $classeCarregar->index();
+    $classeCarregar->$metodo();
   }
 }
