@@ -8,9 +8,10 @@ class Blog
 
     public function index()
     {
-        $listar = new \App\Models\BlogModel();
+        $listar = new \App\Models\BlogModel(); //instanciando a class model
 
-        $this->dados['artigos'] = $listar->listar();
-        $carregarView = new \Core\ConfigView("Views/blog/listarArtigos",$this->dados['artigos'] );
+        $this->dados['artigos'] = $listar->listar(); //chamando todos os itens do db
+        $carregarView = new \Core\ConfigView("Views/blog/listarArtigos", $this->dados);
+        $carregarView->renderizar();
     }
 }
