@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-    <button> <a href="../blog/index">blog</a></button>
+    <button> <a href="./blog/index">blog</a></button>
     
 </body>
 </html>
