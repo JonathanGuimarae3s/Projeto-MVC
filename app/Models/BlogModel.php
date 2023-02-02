@@ -14,6 +14,13 @@ class BlogModel extends Conn
         $this->conn = $this->connect();
 
     }
+    public function selectById(int $id){
+        $query = "SELECT * FROM artigos WHERE id=?";
+        $stmt = $this->conn->prepare($query);
+        $stmt->bindValue(1, $id);
+        $stmt->execute();
+        return $stmt->fetchAll();
+    }
     public function listar()
     {
 

@@ -1,5 +1,7 @@
 <?php
-$this->dados;
+foreach ($this->dados['artigo'] as $dados) {
+    extract($dados);
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -13,20 +15,20 @@ $this->dados;
 
 <body>
 
-    <form action="insert" method="POST">
-        <input type="hidden" name="">
+    <form action="update" method="POST">
+        <input type="hidden" name="id" value="<?php echo $id; ?>">
         <label for="titulo">
             <p>TITULO</p>
-            <input type="text" name="titulo" id="titulo">
+            <input type="text" name="titulo" id="titulo" value="<?php echo $titulo; ?>">
 
         </label>
         <label for="conteudo">
             <p>conteudo</p>
 
-            <input type="text" name="conteudo" id="conteudo">
+            <input type="text" name="conteudo" id="conteudo" value="<?php echo $conteudo; ?>">
 
         </label>
-        <input type="submit" value="cadastrar">
+        <input type="submit" value="atualizar">
     </form>
 </body>
 
